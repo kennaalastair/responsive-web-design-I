@@ -27,7 +27,8 @@ body {
 	line-height: 1;
 }
 ol, ul {
-	list-style: none;
+    list-style: square;
+    margin-left: 20px;
 }
 blockquote, q {
 	quotes: none;
@@ -58,6 +59,7 @@ h1, h2, h3, h4, h5 {
     margin-bottom: 15px;
 }
 
+/* My code starts here */
 /* Your code starts here! */
 .container {
     width: 880px;
@@ -92,40 +94,47 @@ a {
 }
 
 header {
-	display: flex;
-	justify-content: space-evenly;
 	align-items: center;
 	padding-bottom: 50px;
 	border-bottom: solid 1px grey;
 }
 
+.img-heading {
+    width: 100%;
+    padding-bottom: 20px;
+}
+
 h1 {
-	font-size: 60px;
+	font-size: 34px;
+}
+
+.section-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px 20px;
+    border-bottom: 1px solid gray;
+}
+
+.main-content {
+    width: 45%;
+    border: 1px solid gray;
+    padding: 20px;
+    margin-bottom: 20px;
 }
 
 button {
 	height: 20px;
 }
 
-.section1, .section3 {
-	display: flex;
-	padding: 50px 0;
+.facts-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 20px;
 }
 
-.content {
-    flex-direction: column;
-    padding: 0 25px;
-}
-
-.section2 {
-	display: flex;
-	justify-content: center;
-}
-
-footer {
-	border-top: solid 1px grey;
-	padding: 50px 25px;
-	margin: 30px 0;
+.left-column {
+    width: 45%;
 }
 
 .copyright {
@@ -133,20 +142,21 @@ footer {
 	padding: 30px;
 }
 
+/* Responsive - services.html */
 @media (max-width: 800px) {
     .container {
        width: 100%;
     }
-    .img-header {
-        display: none;
-    }
-        .middle-img {
+    .img-heading img {
         max-width: 100%;
         height: auto;
     }
+    .services-section {
+        padding: 0 20px;
+    }
 }
 
-/* Responsive - index.html */
+/* Responsive - services.html */
 @media (max-width: 500px) {
     .container {
         width: 100%;
@@ -168,16 +178,12 @@ footer {
         display: inline-block;
         text-align: center;
     }
-    .section1, .section3 {
+    .section-content {
+        flex-direction: column;
+        width: 100%;
+    }
+    .facts-section {
         flex-wrap: wrap;
-    }
-    .content {
-        padding-bottom: 10px;
-        padding-top: 10px;
-    }
-    .middle-img {
-        max-width: 100%;
-        height: auto;
     }
     footer {
         margin: 0;
